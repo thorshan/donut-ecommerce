@@ -3,68 +3,152 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="icon" href="../static/image/logo.png" type="image/x-icon"/>
-    <title >Home</title>
-    <style>
-        body{
-            background-image: url("https://rb.gy/1plbdp");
-            background-size: cover;
-        }
 
-    </style>
+    <link rel="icon" href="../static/image/logo.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="../static/style.css"/>
+    <title >Home</title>
+
 </head>
 <body >
-<div class="container">
-    <nav class="navbar navbar-expand-lg  navbar-light">
-        <a class="navbar-brand" href="#">
-            <img th:src="@{/image/logo.png}" src="../static/image/logo.png" width="auto" height="50"/>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="main">
+<!--nav-->
+    <div class="nav">
+        <nav class="navbar navbar-expand-lg navbar-light  container">
+            <a class="navbar-brand " href="#">
+                <img th:src="@{/image/logo.png}" src="../static/image/logo.png" width="auto" height="50"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
 
 
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
 
-                <button  class="btn  my-2 my-sm-0" type="submit">
-                    <a href="/login" class="text-decoration-none text-dark">Login</a>
-                </button>
-            </form>
-        </div>
-    </nav>
+                    <button  class="btn  my-2 my-sm-0" type="submit">
+                        <a href="/login" class="text-decoration-none text-dark lg">
+                            <ion-icon name="person-circle-outline" class="lg-icon"></ion-icon>Login</a>
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </div>
+<!--home-->
     <div class="home">
-       <div class="row">
-           <div class="col-lg-6 vh-100">
-
-
-           </div>
-           <div class="col-lg-6  vh-100"></div>
-       </div>
-    </div>
-    <div class="about">
+        <h1 class="text-center pt-4 pb-4">Donuts And Juices</h1>
 
     </div>
-    <div class="contect us">
-
-    </div>
-    <div class="footer"></div>
 </div>
+<!-- Donut -->
+<div class="fav-food">
+    <div class="container">
+        <h1 class="mb-5">Our Special Donuts</h1>
+        <div class="row  ">
+            <div class="donut col-lg-4 d-flex flex-column">
+                <img src="../static/image/chocolate.png" alt="">
+                <a href="#">Chocolate Crunch</a>
+            </div>
+            <div class="donut col-lg-4 d-flex flex-column">
+                <img src="image/Strawberry.png" alt="">
+                <a href="#">Chocolate Crunch</a>
+            </div>
+            <div class="donut col-lg-4 d-flex flex-column">
+                <img src="image/Caramel-Glaze.png" alt="">
+                <a href="#">Chocolate Crunch</a>
+            </div>
 
+        </div>
+        <button class="btn btn-primary mt-5">Order Online</button>
+    </div>
+</div>
+<!-- Juice -->
+<div class="fav-food">
+    <div class="container">
+        <h1 class="mb-5">Our Special Juices</h1>
+        <div class="row  ">
+            <div class="donut col-lg-4 d-flex flex-column">
+                <img src="https://rb.gy/ryhhjl" alt="">
+                <a href="#">Chocolate Crunch</a>
+            </div>
+            <div class="donut col-lg-4 d-flex flex-column">
+                <img src="https://rb.gy/ryhhjl" alt="">
+                <a href="#">Chocolate Crunch</a>
+            </div>
+            <div class="donut col-lg-4 d-flex flex-column">
+                <img src="https://rb.gy/ryhhjl" alt="">
+                <a href="#">Chocolate Crunch</a>
+            </div>
+
+        </div>
+        <button class="btn btn-primary mt-5">Order Online</button>
+    </div>
+</div>
+<!--About page-->
+<div class="about ">
+    <div class="row container sec-about">
+        <div class="col-lg-6 ">
+            <h3>About</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis doloremque corrupti temporibus nisi maiores exercitationem corporis vero, quod quaerat quidem laudantium, placeat dignissimos. Asperiores sint tempore suscipit rem facere excepturi?</p>
+        </div>
+        <div class="col-lg-6 ">
+            <img src="image/donut-2.png" alt="">
+        </div>
+    </div>
+</div>
+<!--Footer-->
+<div class="footer ">
+    <div class="row container sec-footer">
+
+        <div class="col-3">
+            <h5>Address</h5>
+            <p>Yangon </p>
+        </div>
+        <div class="col-3">
+            <h5>Opening Time</h5>
+            <p>Mon-Fri:8am to 9pm</p>
+            <p>Sat-Sun:10am to 10pm</p>
+        </div>
+        <div class="col-3">
+            <h5>Content</h5>
+            <p>wp67636@gmail.com</p>
+            <p>09969306654</p>
+        </div>
+        <div class="col-3">
+            <h5>Follow Us</h5>
+            <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+        </div>
+
+    </div>
+</div>
+</div>
+<!--all script-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
