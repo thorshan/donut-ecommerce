@@ -17,4 +17,8 @@ public class PageController {
     public String register(){
         return "register";
     }
+    @RequestMapping("/shop")
+    public String shop(){
+        return "shop";
+    }
 }

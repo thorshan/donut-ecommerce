@@ -6,23 +6,20 @@
     scroll-behavior: smooth;
 }
 body{
-    background: #acb6e5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #86fde8, #acb6e5);
+background: #FFF7E9;
 }
 
 .nav{
-    background: #acb6e5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #86fde8, #acb6e5);
 
-    padding: 20px 0;
+
+
     top: 0;
     position: sticky;
 }
 .navbar{
     display: flex;
     justify-content: space-between;
+    border-bottom: 1px solid #ccc;
 }
 .lg{
     display: flex;
@@ -34,16 +31,17 @@ body{
 }
 .home{
     background-attachment: fixed;
-    background-image: url("image/donut-1.png");
+    background-image: url("../static/image/donut-1.png");
     width: 100%;
     background-size: 100%;
     background-repeat: no-repeat;
     clip-path: stroke-box;
-    border-top: 3px solid #000;
+
     height: 80vh;
 }
 
 .fav-food{
+
     position: relative;
     width: 100%;
     height: 100vh;
@@ -79,8 +77,9 @@ body{
     margin: 0 auto;
 }
 .footer{
+
     position: relative;
-    border-top: 1px solid #000;
+    border-top: 1px solid #ccc;
     padding: 50px 0;
 
 }
