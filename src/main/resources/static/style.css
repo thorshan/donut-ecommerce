@@ -54,6 +54,9 @@ background: #FFF7E9;
     text-align: center;
     font-weight: bolder;
 }
+.coffee img{
+    height: 300px;
+}
 .about{
     position: relative;
     width: 100%;
