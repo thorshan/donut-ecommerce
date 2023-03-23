@@ -21,4 +21,10 @@ public class PageController {
     public String shop(){
         return "shop";
     }
+
+    @RequestMapping("/admin")
+    public String admin(){
+        return "admin-login";
+    }
+
 }
