@@ -6,56 +6,44 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Login</title>
-    <style>
-        body{
-            background-image: url("https://rb.gy/1plbdp");
-            background-size: cover;
-        }
-
-    </style>
+    <link href="../static/login.css" th:href="@{/login.css}" rel="stylesheet">
 </head>
 <body>
-
-
-<div class="container vh-100 d-flex justify-content-center align-items-center">
-    <div class="w-50 card ">
-        <div class="card-body">
-            <form >
-                <h5 class="text-center mb-5">Register Account</h5>
-                <div class="form-group m-3 ">
-                    <label for="exampleInputEmail1" class="font-weight-bold">Name</label>
-                    <input type="text" class="form-control" >
+<section>
+    <div class=" regi">
+        <div class="form-value">
+            <form action="">
+                <h2>Register</h2>
+                <div class="inputbox">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" required>
+                    <label for="">Name</label>
                 </div>
-                <div class="form-group m-3">
-                    <label for="exampleInputEmail1" class="font-weight-bold">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" required>
+                    <label for="">Email</label>
                 </div>
-                <div class="form-group m-3">
-                    <label for="exampleInputEmail1" class="font-weight-bold">Phone Number</label>
-                    <input type="text"  class="form-control" >
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" required>
+                    <label for="">Password</label>
                 </div>
-                <div class="form-group m-3">
-                    <label for="exampleInputEmail1" class="font-weight-bold">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" >
-                </div>
-                <div class="d-flex flex-column justify-content-center align-items-center " style="margin-top: 30px">
-                    <button type="submit" class="btn btn-success w-75 ">Register</button>
-
+                <div class="inputbox">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <input type="text" required>
+                    <label for="">Phone</label>
                 </div>
 
-
+                <button>Register</button>
+                <div class="register">
+                    <p>You have a account <a href="/login">Log in</a></p>
+                </div>
             </form>
         </div>
     </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-        crossorigin="anonymous"></script>
-
+</section>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
