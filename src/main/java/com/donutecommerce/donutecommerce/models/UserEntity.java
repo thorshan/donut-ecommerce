@@ -1,12 +1,10 @@
-package com.teem.teem.models;
+package com.donutecommerce.donutecommerce.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "users")

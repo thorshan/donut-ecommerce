@@ -1,4 +1,4 @@
-package com.teem.teem.models;
+package com.donutecommerce.donutecommerce.models;
 
 
 import jakarta.persistence.*;
