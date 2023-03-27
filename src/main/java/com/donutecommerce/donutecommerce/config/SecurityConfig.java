@@ -30,8 +30,8 @@ public class SecurityConfig {
         http
                 .csrf().disable()
                 .authorizeHttpRequests()
-                .anyRequest()
-                .authenticated()
+                .requestMatchers("/resources/**").permitAll()
+                .anyRequest().permitAll()
                 .and()
                 .httpBasic().disable()
                 .formLogin().disable();
