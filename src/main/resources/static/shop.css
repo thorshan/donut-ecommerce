@@ -68,10 +68,7 @@
     opacity: 1;
 
 }
-.item-list .btn:hover{
-    border: none;
-    background-color: #43f343;
-}
+
 .donut{
     display: none;
 }

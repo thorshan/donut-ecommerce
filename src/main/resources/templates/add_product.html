@@ -6,9 +6,74 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
           integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Add Product</title>
+    <style>
+        body{
+            background-image: url(image/donut4.png);
+            background-size: cover;
+
+        }
+        .main{
+            width: 100%;
+        }
+        .card1{
+            border: 1px solid rgb(214, 214, 214);
+            border-radius: 50px;
+            padding: 20px;
+            width: 500px;
+            background-color: transparent;
+            backdrop-filter: blur(15px);
+
+        }
+        .img-cont{
+            border-radius: 10px;
+
+            width: 200px;
+            height: 200px;
+            background-image: url(image/blank\ \(2\).png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .img{
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
 </head>
 <body>
-<h1>Add Product</h1>
+<div class=" main  d-flex justify-content-center align-items-center vh-100">
+    <div class=" card1 rounded shadow">
+        <div class="card-body1 text-center">
+            <h2 class="text-light mb-3">Add Product</h2>
+            <form action="">
+                <div class="form-group font-weight-bold  d-flex flex-column align-items-center">
+
+                    <div class="img-cont mt-3 mb-3" >
+
+                        <div class="img d-flex justify-content-center align-items-center" id="preview"></div>
+                    </div>
+                    <label for="input" class="btn btn-primary">
+                        Choose Photo
+                    </label>
+                    <input class="d-none"   type="file" name="" id="input" accept=".jpg, .png, .jpeg">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control font-weight-bold" placeholder="Product Name..">
+                </div>
+                <div class="form-group">
+                    <textarea name="" id="" class="form-control font-weight-bold" placeholder="Recommend..."></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control font-weight-bold" placeholder="Price">
+                </div>
+                <button class="btn btn-primary w-100">Comfirm</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -17,6 +82,34 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
         crossorigin="anonymous"></script>
+<script>
+    WIDTH =200;
+    const fileinput=document.getElementById('input')
 
+    fileinput.addEventListener('change',(event)=>{
+        let image_file = event.target.files[0]
+
+        let reader = new FileReader()
+        reader.readAsDataURL(image_file)
+        reader.onload =(event) =>{
+            let image_url = event.target.result
+            let image = document.createElement('img')
+            image.src = image_url
+
+            image.onload =(e) =>{
+                let canvas =document.createElement("canvas");
+
+                canvas.width =WIDTH
+                canvas.height =WIDTH;
+                const context = canvas.getContext("2d");
+                context.drawImage(image, 0, 0, canvas.width, canvas.height);
+                let new_image_url = context.canvas.toDataURL('image/png',90);
+                let new_image = document.createElement('img');
+                new_image.src = new_image_url;
+                document.getElementById('preview').appendChild(new_image);
+            }
+        }
+    })
+</script>
 </body>
 </html>
